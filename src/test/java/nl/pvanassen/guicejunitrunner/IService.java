@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// ISomeService.java, created by Fabio Strozzi on Mar 27, 2011
+// IService.java, created by Fabio Strozzi on Mar 27, 2011
 package nl.pvanassen.guicejunitrunner;
 
 /**
