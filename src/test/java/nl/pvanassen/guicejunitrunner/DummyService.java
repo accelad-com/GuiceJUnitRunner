@@ -27,16 +27,14 @@ public class DummyService implements IService {
     private IComponent component;
 
     /**
-     * @param component
-     *            the component to set
+     * @param component The component to set
      */
     @Inject
     public void setComponent(IComponent component) {
         this.component = component;
     }
 
-    /*
-     * (non-Javadoc)
+    /**
      * 
      * @see eu.fabiostrozzi.guicejunitrunner.IService#doSomething()
      */

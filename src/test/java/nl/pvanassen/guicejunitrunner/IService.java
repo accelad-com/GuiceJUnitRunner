@@ -20,6 +20,8 @@ package nl.pvanassen.guicejunitrunner;
  * @author Fabio Strozzi
  */
 public interface IService {
-
+    /**
+     * @return Do something and return
+     */
     public String doSomething();
 }

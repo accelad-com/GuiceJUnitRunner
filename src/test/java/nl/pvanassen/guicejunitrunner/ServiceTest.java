@@ -40,7 +40,10 @@ public class ServiceTest {
     public void setService(IService service) {
         this.service = service;
     }
-
+    
+    /**
+     * Test the injecton of the service into the test
+     */
     @Test
     public void testApp() {
         Assert.assertEquals("Hello World!", service.doSomething());

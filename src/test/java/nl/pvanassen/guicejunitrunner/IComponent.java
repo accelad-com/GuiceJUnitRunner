@@ -21,6 +21,8 @@ package nl.pvanassen.guicejunitrunner;
  * 
  */
 public interface IComponent {
-
+    /**
+     * @return Compute something and return
+     */
     public String compute();
 }

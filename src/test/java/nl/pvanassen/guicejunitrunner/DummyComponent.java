@@ -22,7 +22,7 @@ package nl.pvanassen.guicejunitrunner;
  */
 public class DummyComponent implements IComponent {
 
-    /* (non-Javadoc)
+    /**
      * @see eu.fabiostrozzi.guicejunitrunner.IComponent#compute()
      */
     public String compute() {
