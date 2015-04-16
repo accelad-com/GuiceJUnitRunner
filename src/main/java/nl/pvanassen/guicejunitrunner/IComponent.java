@@ -13,20 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// DummyComponent.java, created by Fabio Strozzi on Mar 27, 2011
-package eu.fabiostrozzi.guicejunitrunner;
+// IComponent.java, created by Fabio Strozzi on Mar 27, 2011
+package nl.pvanassen.guicejunitrunner;
 
 /**
  * @author Fabio Strozzi
- *
+ * 
  */
-public class DummyComponent implements IComponent {
+public interface IComponent {
 
-    /* (non-Javadoc)
-     * @see eu.fabiostrozzi.guicejunitrunner.IComponent#compute()
-     */
-    public String compute() {
-        return "Hello World!";
-    }
-
+    public String compute();
 }

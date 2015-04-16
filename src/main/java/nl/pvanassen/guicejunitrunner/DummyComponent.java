@@ -13,29 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// TestModule.java, created by Fabio Strozzi on Mar 27, 2011
-package eu.fabiostrozzi.guicejunitrunner;
-
-import com.google.inject.AbstractModule;
-
-import eu.fabiostrozzi.guicejunitrunner.DummyComponent;
-import eu.fabiostrozzi.guicejunitrunner.IComponent;
+// DummyComponent.java, created by Fabio Strozzi on Mar 27, 2011
+package nl.pvanassen.guicejunitrunner;
 
 /**
- * A trivial Guice configuration.
- * 
  * @author Fabio Strozzi
+ *
  */
-public class ComponentsTestModule extends AbstractModule {
+public class DummyComponent implements IComponent {
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.google.inject.AbstractModule#configure()
+    /* (non-Javadoc)
+     * @see eu.fabiostrozzi.guicejunitrunner.IComponent#compute()
      */
-    @Override
-    protected void configure() {
-        bind(IComponent.class).to(DummyComponent.class);
+    public String compute() {
+        return "Hello World!";
     }
 
 }

@@ -13,35 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// DummyService.java, created by Fabio Strozzi on Mar 27, 2011
-package eu.fabiostrozzi.guicejunitrunner;
+// TestModule.java, created by Fabio Strozzi on Mar 27, 2011
+package nl.pvanassen.guicejunitrunner;
 
-import com.google.inject.Inject;
+import nl.pvanassen.guicejunitrunner.DummyService;
+import nl.pvanassen.guicejunitrunner.IService;
+
+import com.google.inject.AbstractModule;
 
 /**
- * @author Fabio Strozzi
+ * A trivial Guice configuration.
  * 
+ * @author Fabio Strozzi
  */
-public class DummyService implements IService {
-
-    private IComponent component;
-
-    /**
-     * @param component
-     *            the component to set
-     */
-    @Inject
-    public void setComponent(IComponent component) {
-        this.component = component;
-    }
+public class ServicesTestModule extends AbstractModule {
 
     /*
      * (non-Javadoc)
      * 
-     * @see eu.fabiostrozzi.guicejunitrunner.IService#doSomething()
+     * @see com.google.inject.AbstractModule#configure()
      */
-    public String doSomething() {
-        return component.compute();
+    @Override
+    protected void configure() {
+        bind(IService.class).to(DummyService.class);
     }
 
 }

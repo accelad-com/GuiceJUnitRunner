@@ -13,13 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-// ISomeService.java, created by Fabio Strozzi on Mar 27, 2011
-package eu.fabiostrozzi.guicejunitrunner;
+// TestModule.java, created by Fabio Strozzi on Mar 27, 2011
+package nl.pvanassen.guicejunitrunner;
+
+import nl.pvanassen.guicejunitrunner.DummyComponent;
+import nl.pvanassen.guicejunitrunner.IComponent;
+
+import com.google.inject.AbstractModule;
 
 /**
+ * A trivial Guice configuration.
+ * 
  * @author Fabio Strozzi
  */
-public interface IService {
+public class ComponentsTestModule extends AbstractModule {
 
-    public String doSomething();
+    /*
+     * (non-Javadoc)
+     * 
+     * @see com.google.inject.AbstractModule#configure()
+     */
+    @Override
+    protected void configure() {
+        bind(IComponent.class).to(DummyComponent.class);
+    }
+
 }

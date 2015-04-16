@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 // ServiceTest.java, created by Fabio Strozzi on Mar 27, 2011
-package eu.fabiostrozzi.guicejunitrunner;
+package nl.pvanassen.guicejunitrunner;
+
+import nl.pvanassen.guicejunitrunner.IService;
+import nl.pvanassen.guicejunitrunner.GuiceJUnitRunner.GuiceModules;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import com.google.inject.Inject;
-
-import eu.fabiostrozzi.guicejunitrunner.IService;
-import eu.fabiostrozzi.guicejunitrunner.GuiceJUnitRunner.GuiceModules;
 
 /**
  * Unit test for simple App.
