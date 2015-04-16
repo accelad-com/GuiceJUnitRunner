@@ -52,4 +52,10 @@
 		<developerConnection>scm:git:git@github.com:pvanassen/GuiceJUnitRunner.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+	<issueManagement>
+		<url>https://github.com/pvanassen/GuiceJUnitRunner/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<url>https://travis-ci.org/pvanassen/GuiceJUnitRunner</url>
+	</ciManagement>
 </project>
