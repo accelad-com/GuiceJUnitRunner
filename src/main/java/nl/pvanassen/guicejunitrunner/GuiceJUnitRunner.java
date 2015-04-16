@@ -37,10 +37,18 @@ import com.google.inject.Module;
 public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
     private Injector injector;
 
+    /**
+     * The annotation to define the modules to load
+     * @author Fabio Strozzi
+     *
+     */
     @Target(ElementType.TYPE)
     @Retention(RetentionPolicy.RUNTIME)
     @Inherited
     public @interface GuiceModules {
+        /**
+         * @return Modules to load during the unit test
+         */
         Class<?>[] value();
     }
 
