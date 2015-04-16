@@ -38,6 +38,19 @@ public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
     private Injector injector;
 
     /**
+     * Instances a new JUnit runner.
+     * 
+     * @param klass
+     *            The test class
+     * @throws InitializationError
+     */
+    public GuiceJUnitRunner(Class<?> klass) throws InitializationError {
+        super(klass);
+        Class<?>[] classes = getModulesFor(klass);
+        injector = createInjectorFor(classes);
+    }
+
+    /**
      * The annotation to define the modules to load
      * @author Fabio Strozzi
      *
@@ -60,19 +73,6 @@ public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
         Object obj = super.createTest();
         injector.injectMembers(obj);
         return obj;
-    }
-
-    /**
-     * Instances a new JUnit runner.
-     * 
-     * @param klass
-     *            The test class
-     * @throws InitializationError
-     */
-    public GuiceJUnitRunner(Class<?> klass) throws InitializationError {
-        super(klass);
-        Class<?>[] classes = getModulesFor(klass);
-        injector = createInjectorFor(classes);
     }
 
     /**
