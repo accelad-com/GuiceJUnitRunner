@@ -32,8 +32,6 @@ import com.google.inject.Inject;
 @GuiceModules({ ComponentsTestModule.class, ServicesTestModule.class })
 public class ServiceTest {
     private IService service;
-    
-    
 
     /**
      * @param service the service to set
@@ -42,8 +40,6 @@ public class ServiceTest {
     public void setService(IService service) {
         this.service = service;
     }
-
-
 
     @Test
     public void testApp() {

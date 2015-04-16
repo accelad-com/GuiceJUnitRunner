@@ -28,9 +28,7 @@ import com.google.inject.AbstractModule;
  */
 public class ServicesTestModule extends AbstractModule {
 
-    /*
-     * (non-Javadoc)
-     * 
+    /**
      * @see com.google.inject.AbstractModule#configure()
      */
     @Override

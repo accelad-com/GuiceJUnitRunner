@@ -44,9 +44,7 @@ public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
         Class<?>[] value();
     }
 
-    /*
-     * (non-Javadoc)
-     * 
+    /**
      * @see org.junit.runners.BlockJUnit4ClassRunner#createTest()
      */
     @Override
