@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>guice-junit-runner</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Guice JUnit Runner</name>
@@ -45,7 +45,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:pvanassen/GuiceJUnitRunner.git</connection>
 		<developerConnection>scm:git:git@github.com:pvanassen/GuiceJUnitRunner.git</developerConnection>
-		<tag>guice-junit-runner-1.0.0</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<issueManagement>
 		<url>https://github.com/pvanassen/GuiceJUnitRunner/issues</url>
