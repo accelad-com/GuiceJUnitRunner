@@ -105,10 +105,11 @@ public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
      */
     private Class<?>[] getModulesFor(Class<?> klass) throws InitializationError {
         GuiceModules annotation = klass.getAnnotation(GuiceModules.class);
-        if (annotation == null)
+        if (annotation == null) {
             throw new InitializationError(
                     "Missing @GuiceModules annotation for unit test '" + klass.getName()
                             + "'");
+        }
         return annotation.value();
     }
 
