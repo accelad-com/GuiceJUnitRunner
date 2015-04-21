@@ -10,7 +10,7 @@ To use this library, include it in your project:
 <dependency>
 	<groupId>nl.pvanassen</groupId>
 	<artifactId>guice-junit-runner</artifactId>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<scope>test</scope>
 </dependency>
 ```
