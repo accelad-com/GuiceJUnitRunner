@@ -17,7 +17,6 @@
 package nl.pvanassen.guicejunitrunner;
 
 import nl.pvanassen.guicejunitrunner.IService;
-import nl.pvanassen.guicejunitrunner.GuiceJUnitRunner.GuiceModules;
 
 import org.junit.Assert;
 import org.junit.Test;

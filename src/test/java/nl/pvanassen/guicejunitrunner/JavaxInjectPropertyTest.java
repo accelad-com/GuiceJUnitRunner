@@ -18,8 +18,6 @@ package nl.pvanassen.guicejunitrunner;
 
 import javax.inject.Inject;
 
-import nl.pvanassen.guicejunitrunner.GuiceJUnitRunner.GuiceModules;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
