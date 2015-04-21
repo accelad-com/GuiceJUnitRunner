@@ -16,8 +16,9 @@ import com.google.inject.Injector;
 import com.google.inject.matcher.Matchers;
 
 /**
+ * 
  * Runs test methods within a MyBatis-controlled SQL transaction and rolls back on test completion (failed or success).
- * </p>
+ * 
  * Example:
  * 
  * <pre>
@@ -56,8 +57,6 @@ import com.google.inject.matcher.Matchers;
  *    ...
  * }
  * </pre>
- * 
- * </p>
  */
 public class GuiceMyBatisRollbackJUnitRunner extends BlockJUnit4ClassRunner {
     private final Logger logger = LoggerFactory.getLogger(GuiceMyBatisRollbackJUnitRunner.class);
@@ -70,7 +69,7 @@ public class GuiceMyBatisRollbackJUnitRunner extends BlockJUnit4ClassRunner {
      * Instances a new JUnit runner.
      * 
      * @param klass The test class
-     * @throws InitializationError
+     * @throws InitializationError In case of an error while initializing the class 
      */
     public GuiceMyBatisRollbackJUnitRunner(final Class<?> klass) throws InitializationError {
         super(klass);
@@ -118,7 +117,7 @@ public class GuiceMyBatisRollbackJUnitRunner extends BlockJUnit4ClassRunner {
     }
 
     /**
-     * @{inheritDoc}
+     * {@inheritDoc}
      * 
      * Fills the test and injects the required interceptors
      * 

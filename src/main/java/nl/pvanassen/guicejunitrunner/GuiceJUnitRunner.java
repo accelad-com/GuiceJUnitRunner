@@ -32,9 +32,8 @@ public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
     /**
      * Instances a new JUnit runner.
      * 
-     * @param klass
-     *            The test class
-     * @throws InitializationError
+     * @param klass The test class
+     * @throws InitializationError In case of an error while initializing the class 
      */
     public GuiceJUnitRunner(Class<?> klass) throws InitializationError {
         super(klass);
