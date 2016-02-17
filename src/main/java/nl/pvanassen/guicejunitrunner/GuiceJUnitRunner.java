@@ -23,33 +23,32 @@ import com.google.inject.Injector;
 
 /**
  * A JUnit class runner for Guice based applications.
- * 
+ *
  * @author Fabio Strozzi
  */
 public class GuiceJUnitRunner extends BlockJUnit4ClassRunner {
-    private final Injector injector;
 
     /**
      * Instances a new JUnit runner.
-     * 
-     * @param klass The test class
-     * @throws InitializationError In case of an error while initializing the class 
+     *
+     * @param klass
+     *            The test class
+     * @throws InitializationError
+     *             In case of an error while initializing the class
      */
     public GuiceJUnitRunner(Class<?> klass) throws InitializationError {
         super(klass);
-        Class<?>[] classes = GuiceHelper.getModulesFor(klass);
-        injector = GuiceHelper.createInjectorFor(classes, null);
     }
 
-    
     /**
      * @see org.junit.runners.BlockJUnit4ClassRunner#createTest()
      */
     @Override
     public Object createTest() throws Exception {
         Object obj = super.createTest();
+        Class<?>[] classes = GuiceHelper.getModulesFor(getTestClass().getJavaClass());
+        Injector injector = GuiceHelper.createInjectorFor(classes, null);
         injector.injectMembers(obj);
         return obj;
     }
-
 }
